@@ -1,7 +1,7 @@
 {
-  "name": "Old Reddit Redirect",
+  "name": "i Reddit Redirect",
   "description": "Ensure Reddit always loads the old design",
-  "version": "1.1.4",
+  "version": "0.1",
   "manifest_version": 2,
   "background": {"scripts":["background.js"]},
   "icons": {
@@ -13,6 +13,7 @@
     "webRequestBlocking",
     "*://reddit.com/*",
     "*://www.reddit.com/*",
+    "*://old.reddit.com/*",
     "*://np.reddit.com/*",
     "*://new.reddit.com/*"
   ]

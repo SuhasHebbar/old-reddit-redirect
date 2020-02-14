@@ -1,4 +1,4 @@
-const oldReddit = "https://old.reddit.com";
+const iReddit = "https://i.reddit.com";
 
 chrome.webRequest.onBeforeRequest.addListener(
   function(details) {
@@ -9,13 +9,14 @@ chrome.webRequest.onBeforeRequest.addListener(
 
     return {
       redirectUrl:
-        oldReddit + details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/)[1]
+        iReddit + details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/)[1]
     };
   },
   {
     urls: [
       "*://reddit.com/*",
       "*://www.reddit.com/*",
+      "*://old.reddit.com/*",
       "*://np.reddit.com/*",
       "*://new.reddit.com/*",
     ],
